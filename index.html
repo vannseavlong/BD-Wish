@@ -1,17 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Interactive Birthday Surprise Website</title>
-    </head>
+    <title>Birthday Wish — A Personalized Birthday Surprise</title>
+    <meta
+      name="description"
+      content="Turn any birthday into an interactive surprise: a personalized wish, animated candles, a selfie with a birthday hat, and a downloadable keepsake card — all from one shareable link."
+    />
+    <meta name="author" content="Birthday Wish" />
+    <meta name="theme-color" content="#4c1d95" />
+    <link rel="canonical" href="https://your-domain.com/" />
 
-    <body>
-      <div id="root"></div>
-      <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Birthday Wish" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta
+      property="og:title"
+      content="Birthday Wish — A Personalized Birthday Surprise"
+    />
+    <meta
+      property="og:description"
+      content="Turn any birthday into an interactive surprise: a personalized wish, animated candles, a selfie with a birthday hat, and a downloadable keepsake card — all from one shareable link."
+    />
+    <meta property="og:image" content="https://your-domain.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Birthday Wish — an animated birthday cake with candles and the tagline 'Turn their birthday into a surprise.'" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Birthday Wish — A Personalized Birthday Surprise" />
+    <meta
+      name="twitter:description"
+      content="Turn any birthday into an interactive surprise: a personalized wish, animated candles, a selfie, and a downloadable keepsake card."
+    />
+    <meta name="twitter:image" content="https://your-domain.com/og-image.png" />
+
+    <!-- Fonts: Fredoka for display headings, Inter for body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

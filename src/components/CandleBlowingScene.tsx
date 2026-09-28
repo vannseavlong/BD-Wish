@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Sparkles } from 'lucide-react';
 import { ImprovedCake } from './ImprovedCake';
 import { Confetti } from './Confetti';
 import { FloatingBalloons } from './FloatingBalloons';
@@ -54,29 +55,30 @@ export function CandleBlowingScene({ userName, onCandlesBlownOut }: CandleBlowin
         animate={{ y: 0, opacity: 1 }}
         className="text-center mb-8 z-10"
       >
-        <motion.h2 
-          className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 px-4"
+        <motion.h2
+          className="font-display text-3xl sm:text-4xl md:text-6xl font-semibold text-white mb-4 px-4"
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          Happy Birthday, <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300">{userName}</span>! 🎉
+          Happy Birthday, <span className="text-celebrate">{userName}</span>
         </motion.h2>
         {candlesLit ? (
-          <motion.p 
+          <motion.p
             className="text-lg sm:text-xl md:text-2xl text-white/80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Make a wish...
+            Make a wish&hellip;
           </motion.p>
         ) : (
-          <motion.p 
-            className="text-lg sm:text-xl md:text-2xl text-white/80"
+          <motion.p
+            className="flex items-center justify-center gap-2 text-lg sm:text-xl md:text-2xl text-white/80"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
           >
-            Your wish is granted! ✨
+            <Sparkles size={20} className="text-amber-200" />
+            Your wish is granted!
           </motion.p>
         )}
       </motion.div>

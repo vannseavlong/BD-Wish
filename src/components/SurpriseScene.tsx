@@ -9,6 +9,8 @@ import {
   RotateCcw,
   Image as ImageIcon,
   FileText,
+  PartyPopper,
+  Sparkles,
 } from "lucide-react";
 
 interface SurpriseSceneProps {
@@ -368,13 +370,13 @@ export function SurpriseScene({
       {/* Floating particles */}
       <FloatingParticles />
 
-      {/* Main Birthday Card - iOS Glass Style */}
+      {/* Main birthday card */}
       <div ref={cardRef} className="relative z-10 w-full max-w-4xl">
         <motion.div
           initial={{ scale: 0.8, y: 50 }}
           animate={{ scale: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-          className="bg-white/10 backdrop-blur-2xl border border-white/30 rounded-[32px] p-6 sm:p-8 md:p-12 shadow-2xl"
+          className="glass-panel rounded-4xl p-6 sm:p-8 md:p-12 shadow-2xl"
         >
           {/* Card Header */}
           <motion.div
@@ -383,11 +385,12 @@ export function SurpriseScene({
             transition={{ delay: 0.8 }}
             className="text-center mb-6 sm:mb-8"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 mb-3">
-              🎉 Happy Birthday! 🎉
+            <h1 className="font-display flex items-center justify-center gap-3 text-3xl sm:text-4xl md:text-6xl font-semibold text-white mb-3">
+              <PartyPopper className="text-amber-200 w-7 h-7 sm:w-9 sm:h-9 md:w-12 md:h-12 shrink-0" />
+              Happy Birthday!
             </h1>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-white/90">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              <h2 className="text-celebrate font-display text-2xl sm:text-3xl md:text-4xl font-semibold">
                 {userName}
               </h2>
               {birthDate && (
@@ -497,9 +500,9 @@ export function SurpriseScene({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: userPhoto ? 1.3 : 1 }}
-            className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-8"
+            className="bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-8"
           >
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed min-h-[80px] sm:min-h-[120px]">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed min-h-20 sm:min-h-30">
               "{displayedText}"
               {!typingComplete && (
                 <motion.span
@@ -519,12 +522,12 @@ export function SurpriseScene({
               transition={{ delay: 0.3 }}
               className="text-center space-y-3 sm:space-y-4"
             >
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90">
-                ✨ May all your dreams come true! ✨
+              <p className="flex items-center justify-center gap-2 text-lg sm:text-xl md:text-2xl text-white/90">
+                <Sparkles size={20} className="text-amber-200 shrink-0" />
+                May all your dreams come true!
               </p>
               <p className="text-base sm:text-lg md:text-xl text-white/70 px-4">
-                Wishing you a year filled with joy, love, and endless happiness!
-                🎂
+                Wishing you a year filled with joy, love, and endless happiness.
               </p>
             </motion.div>
           )}
@@ -542,7 +545,7 @@ export function SurpriseScene({
           onClick={onMusicToggle}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-all shadow-lg border border-white/30 text-sm sm:text-base"
+          className="btn-party btn-party-ghost px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
         >
           {musicEnabled ? <Volume2 size={18} /> : <VolumeX size={18} />}
           <span className="hidden sm:inline">
@@ -555,7 +558,7 @@ export function SurpriseScene({
           disabled={downloading}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 backdrop-blur-md rounded-full text-white transition-all shadow-lg shadow-blue-500/50 disabled:opacity-50 text-sm sm:text-base"
+          className="btn-party btn-party-info px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
         >
           <ImageIcon size={18} />
           <span>PNG</span>
@@ -566,7 +569,7 @@ export function SurpriseScene({
           disabled={downloading}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 backdrop-blur-md rounded-full text-white transition-all shadow-lg shadow-green-500/50 disabled:opacity-50 text-sm sm:text-base"
+          className="btn-party btn-party-success px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
         >
           <FileText size={18} />
           <span>PDF</span>
@@ -576,7 +579,7 @@ export function SurpriseScene({
           onClick={onReplay}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 backdrop-blur-md rounded-full text-white transition-all shadow-lg shadow-purple-500/50 text-sm sm:text-base"
+          className="btn-party btn-party-primary px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
         >
           <RotateCcw size={18} />
           <span className="hidden sm:inline">Replay</span>

@@ -14,7 +14,7 @@ export function DownloadableCard({ userName, birthDate, wish, userPhoto }: Downl
         height: '700px',
         margin: '0',
         padding: '0',
-        background: 'linear-gradient(135deg, #7C3AED 0%, #DB2777 50%, #3B82F6 100%)',
+        background: 'linear-gradient(135deg, #1e1b4b 0%, #4c1d95 55%, #831843 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -224,14 +224,14 @@ export function DownloadableCard({ userName, birthDate, wish, userPhoto }: Downl
             color: 'rgba(255, 255, 255, 0.9)',
             margin: '0 0 8px 0',
           }}>
-            ✨ May all your dreams come true! ✨
+            ✨ May all your dreams come true!
           </p>
           <p style={{
             fontSize: '16px',
             color: 'rgba(255, 255, 255, 0.7)',
             margin: 0,
           }}>
-            Wishing you a year filled with joy, love, and endless happiness! 🎂
+            Wishing you a year filled with joy, love, and endless happiness.
           </p>
         </div>
       </div>

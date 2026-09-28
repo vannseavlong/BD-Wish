@@ -132,8 +132,8 @@ export function CameraCapture({ userName, onPhotoTaken }: CameraCaptureProps) {
         animate={{ y: 0, opacity: 1 }}
         className="text-center mb-6 sm:mb-8"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
-          Smile, {userName}! 📸
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-3 sm:mb-4">
+          Smile, {userName}!
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-white/80 px-4">
           Let's capture your special moment with a birthday hat!
@@ -158,20 +158,20 @@ export function CameraCapture({ userName, onPhotoTaken }: CameraCaptureProps) {
                 >
                   <Camera size={64} className="mx-auto mb-4 opacity-50" />
                 </motion.div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">No Camera Access</h3>
+                <h3 className="font-display text-xl sm:text-2xl font-semibold mb-2">No Camera Access</h3>
                 <p className="text-sm sm:text-base text-white/80 mb-1">
                   No worries! You can continue without a photo.
                 </p>
                 <p className="text-xs sm:text-sm text-white/60 mb-6">
-                  Your birthday card will still be beautiful! ✨
+                  Your birthday card will still be beautiful.
                 </p>
                 <motion.button
                   onClick={() => onPhotoTaken('')}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full text-white text-base sm:text-lg font-bold shadow-lg shadow-purple-500/50 hover:shadow-2xl transition-all"
+                  className="btn-party btn-party-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                 >
-                  Continue to Celebration 🎉
+                  Continue to Celebration
                 </motion.button>
               </div>
             </div>
@@ -220,7 +220,7 @@ export function CameraCapture({ userName, onPhotoTaken }: CameraCaptureProps) {
                 onClick={capturePhoto}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full text-white text-base sm:text-lg font-bold shadow-lg shadow-purple-500/50 hover:shadow-2xl transition-all"
+                className="btn-party btn-party-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
               >
                 <Camera size={20} className="sm:w-6 sm:h-6" />
                 <span>Capture Photo</span>
@@ -231,7 +231,7 @@ export function CameraCapture({ userName, onPhotoTaken }: CameraCaptureProps) {
                   onClick={retakePhoto}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-all text-sm sm:text-base"
+                  className="btn-party btn-party-ghost px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
                 >
                   <RotateCcw size={18} className="sm:w-5 sm:h-5" />
                   <span>Retake</span>
@@ -241,7 +241,7 @@ export function CameraCapture({ userName, onPhotoTaken }: CameraCaptureProps) {
                   onClick={confirmPhoto}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-white text-base sm:text-lg font-bold shadow-lg shadow-green-500/50 hover:shadow-2xl transition-all"
+                  className="btn-party btn-party-success px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                 >
                   <Check size={20} className="sm:w-6 sm:h-6" />
                   <span>Perfect!</span>
